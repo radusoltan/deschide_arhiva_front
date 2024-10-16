@@ -4,15 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f6f2500-830b-49c9-a8ee-2513038944b3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/fonts/GeistMonoVF.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/GeistVF.woff" beforeDir="false" />
+    <list default="true" id="7f6f2500-830b-49c9-a8ee-2513038944b3" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/app/[locale]/search/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Pagination.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Public/PublicNavigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/SearchForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/elastic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[locale]/(auth)/AuthCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Auth/AuthCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[locale]/(auth)/AuthSessionStatus.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Auth/AuthSessionStatus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[locale]/(auth)/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/[locale]/(auth)/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[locale]/(auth)/login/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/[locale]/(auth)/login/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[locale]/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/[locale]/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[locale]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/[locale]/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ApplicationLogo.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ApplicationLogo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +34,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="JSX File" />
       </list>
     </option>
   </component>
@@ -38,20 +50,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu-22.04/var/www/deschide_multilang/components",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.LanguageChanger.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu-22.04/var/www/deschide_multilang/node_modules/@eslint&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;wsl://Ubuntu-22.04@/usr/bin/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;\\\\wsl.localhost\\Ubuntu-22.04\\usr\\bin\\yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 243.19420.26\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\components" />
@@ -59,6 +78,7 @@
       <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\app\[locale]\(admin)" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\components\Auth" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\app" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\app\[locale]" />
@@ -67,7 +87,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-WS-241.14494.235" />
+        <option value="bundled-js-predefined-d6986cc7102b-b86d7ee83eed-JavaScript-WS-243.19420.26" />
       </set>
     </attachedChunks>
   </component>
@@ -80,8 +100,25 @@
       <option name="presentableId" value="Default" />
       <updated>1728723789950</updated>
       <workItem from="1728723791474" duration="10625000" />
-      <workItem from="1728808998587" duration="627000" />
+      <workItem from="1728808998587" duration="10641000" />
+      <workItem from="1728974949938" duration="2896000" />
+      <workItem from="1728978643697" duration="192000" />
+      <workItem from="1728979472339" duration="284000" />
+      <workItem from="1728979951366" duration="29000" />
+      <workItem from="1728980020462" duration="1118000" />
+      <workItem from="1728983475022" duration="1722000" />
+      <workItem from="1728985226122" duration="3993000" />
+      <workItem from="1729066959614" duration="13519000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1728809842001</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728809842001</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,5 +134,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>

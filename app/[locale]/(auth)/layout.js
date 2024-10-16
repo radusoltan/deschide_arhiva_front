@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import AuthCard from '@/app/[locale]/(auth)/AuthCard'
+import AuthCard from '@/components/Auth/AuthCard'
 import ApplicationLogo from '@/components/ApplicationLogo'
 
 export const metadata = {
