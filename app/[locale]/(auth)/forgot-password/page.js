@@ -6,7 +6,7 @@ import InputError from '@/components/InputError'
 import Label from '@/components/Label'
 import { useAuth } from '@/hooks/auth'
 import { useState } from 'react'
-import AuthSessionStatus from '@/app/(auth)/AuthSessionStatus'
+import AuthSessionStatus from '@/components/Auth/AuthSessionStatus'
 
 const Page = () => {
     const { forgotPassword } = useAuth({

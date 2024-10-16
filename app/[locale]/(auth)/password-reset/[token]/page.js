@@ -7,7 +7,7 @@ import Label from '@/components/Label'
 import { useAuth } from '@/hooks/auth'
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
-import AuthSessionStatus from '@/app/(auth)/AuthSessionStatus'
+import AuthSessionStatus from '@/components/Auth/AuthSessionStatus'
 
 const PasswordReset = () => {
     const searchParams = useSearchParams()
