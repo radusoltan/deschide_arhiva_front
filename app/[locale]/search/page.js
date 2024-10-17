@@ -51,7 +51,7 @@ const SearchPage = async ({searchParams, params: {locale}})=>{
         <article
             className="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
           <div className="flex justify-between items-center mb-5 text-gray-500">
-                  <Link href={`/${locale}/${res._source.category.slug}/${res._source.slug}`}><span
+                  <Link href={`/${locale}/${res._source.category.slug}/${res._id}/${res._source.slug}`}><span
                       className="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
                       {res._source.category.title}
                   </span></Link>
