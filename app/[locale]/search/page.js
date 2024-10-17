@@ -65,7 +65,7 @@ const SearchPage = async ({searchParams, params: {locale}})=>{
             <div className="flex items-center space-x-4">
               <span className="font-medium dark:text-white"> {res._source.authors[0].name}</span>
             </div>
-            <Link href={`/${locale}/${res._source.category.slug}/${res._source.slug}`}
+            <Link href={`/${locale}/${res._source.category.slug}/${res._id}/${res._source.slug}`}
                className="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
               Read more
               <svg className="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
