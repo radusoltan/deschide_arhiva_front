@@ -30,7 +30,15 @@ export default async function initTranslations(
     defaultNS: namespaces[0],
     fallbackNS: namespaces[0],
     ns: namespaces,
-    preload: resources ? [] : i18nConfig.locales
+    preload: resources ? [] : i18nConfig.locales,
+    detection: {
+      order:['cookie', 'localStorage'],
+      caches: ['cookie', 'localStorage']
+    },
+    interpolation: {
+      escapeValue: false // react already safes from xss
+    },
+    react: { useSuspense: false }
   });
 
   return {

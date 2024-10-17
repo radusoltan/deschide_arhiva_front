@@ -16,6 +16,10 @@ const getArticle = async (locale, article)=>{
   }
 }
 
+export async function generateStaticParams(){
+  return []
+}
+
 const ArticlePage = async ({params: {locale, article: id}, searchParams})=>{
   const {resources} = await initTranslations(locale, i18nNamespaces)
 

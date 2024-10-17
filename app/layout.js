@@ -1,6 +1,7 @@
 import "./globals.css";
 import i18nConfig from "@/i18nConfig";
 import { Poppins } from 'next/font/google'
+import {dir} from "i18next"
 export const metadata = {
   title: "Arhiva Deschide.MD",
   description: "Rămâi la curent cu Deschide, cel mai important portal de știri din Moldova. Oferim știri de ultimă oră, analize și reportaje din politică, afaceri și multe altele. Citește acum!",
