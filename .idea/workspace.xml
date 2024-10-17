@@ -4,18 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f6f2500-830b-49c9-a8ee-2513038944b3" name="Changes" comment="initial commit 2">
-      <change beforePath="$PROJECT_DIR$/app/[locale]/(admin)/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/[locale]/(admin)/Loading.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/[locale]/(admin)/Navigation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/[locale]/(admin)/dashboard/page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/[locale]/(admin)/layout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/[locale]/(auth)/forgot-password/page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/[locale]/(auth)/layout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/[locale]/(auth)/login/page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/[locale]/(auth)/password-reset/[token]/page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/[locale]/(auth)/register/page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/[locale]/(auth)/verify-email/page.js" beforeDir="false" />
+    <list default="true" id="7f6f2500-830b-49c9-a8ee-2513038944b3" name="Changes" comment="initial commit 4">
+      <change afterPath="$PROJECT_DIR$/app/[locale]/[category]/[article]/[slug]/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/get_img/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ArticleBody.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[locale]/[category]/[article]/page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[locale]/[category]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/[locale]/[category]/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[locale]/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/[locale]/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[locale]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/[locale]/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[locale]/search/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/[locale]/search/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Auth/AuthCard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Auth/AuthSessionStatus.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dropdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DropdownLink.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ExampleClientComponent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Input.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/InputError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Label.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NavLink.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Public/PublicNavigation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ResponsiveNavLink.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +88,7 @@
       <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\app\[locale]\(admin)" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\app\[locale]\[category]\[article]\[slug]" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\components\Auth" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\app" />
@@ -100,7 +119,7 @@
       <workItem from="1728980020462" duration="1118000" />
       <workItem from="1728983475022" duration="1722000" />
       <workItem from="1728985226122" duration="3993000" />
-      <workItem from="1729066959614" duration="15034000" />
+      <workItem from="1729066959614" duration="26089000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -126,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729086443895</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="initial commit 3">
+      <option name="closed" value="true" />
+      <created>1729087381518</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729087381518</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +173,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="initial commit 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit 2" />
+    <MESSAGE value="initial commit 3" />
+    <MESSAGE value="initial commit 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit 4" />
   </component>
 </project>

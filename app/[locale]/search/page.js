@@ -1,7 +1,9 @@
 import {client} from "@/lib/elastic";
 import Link from "next/link";
 import moment from "moment";
-
+const i18nNamespaces = ['home'];
+import initTranslations from "@/app/i18n";
+import TranslationsProvider from "@/components/TranslationsProvider";
 const search = async (locale, query)=>{
 
   const response = await client.search({
@@ -36,7 +38,14 @@ const SearchPage = async ({searchParams, params: {locale}})=>{
 
   const {results, total} = await search(locale, query)
 
-  return <div className="container mx-auto">
+  const {resources} = await initTranslations(locale,i18nNamespaces)
+
+  return <TranslationsProvider
+      locale={locale}
+      resources={resources}
+      namespaces={i18nNamespaces}
+  >
+    <div className="container mx-auto">
     {
       results.map(res=><div key={res._id} className="mt-6 border-t border-gray-100">{
         <article
@@ -70,6 +79,7 @@ const SearchPage = async ({searchParams, params: {locale}})=>{
       }</div>)
     }
   </div>
+  </TranslationsProvider>
 }
 
 export default SearchPage

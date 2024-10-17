@@ -13,3 +13,7 @@
     box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .06);
     background: white;
 }
+
+.article-body > p {
+    @apply mb-5 text-gray-800
+}

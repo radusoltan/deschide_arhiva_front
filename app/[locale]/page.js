@@ -1,14 +1,9 @@
 
-import ExampleClientComponent from "@/components/ExampleClientComponent";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
-import LanguageChanger from "@/components/LanguageChanger";
 import {client} from "@/lib/elastic";
 import Link from "next/link";
 import Pagination from "@/components/Pagination";
-import 'moment/locale/ro'
-import 'moment/locale/ru'
-import moment from "moment";
 const i18nNamespaces = ['home'];
 
 
@@ -69,7 +64,7 @@ const Home = async ({params: {locale}, searchParams})=>{
                 <div className="flex flex-row sm:block">
                   <div className="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 className="text-lg font-bold leading-tight mb-2">
-                      <Link href={`/${locale}/${article._source.category.slug}/${article._source.slug}`}>{article._source.title}</Link>
+                      <Link href={`/${locale}/${article._source.category.slug}/${article._id}/${article._source.slug}`}>{article._source.title}</Link>
                     </h3>
                   </div>
                 </div>
