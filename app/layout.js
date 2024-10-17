@@ -5,11 +5,14 @@ import {dir} from "i18next"
 export const metadata = {
   title: "Arhiva Deschide.MD",
   description: "Rămâi la curent cu Deschide, cel mai important portal de știri din Moldova. Oferim știri de ultimă oră, analize și reportaje din politică, afaceri și multe altele. Citește acum!",
+  verification: {
+    google: "-rDqDICX_ImOW78yT0FZM0kUFLXOek0SKsIClP6YNTs"
+  }
 };
 
 const poppins = Poppins({
   subsets: ['latin', 'latin-ext'],
-  weight: ['100','200','300','400','500','600','700','800','900'],
+  weight: ['100', '200', '300','400','500','600','700','800','900'],
 })
 
 export function generateStaticParams() {
