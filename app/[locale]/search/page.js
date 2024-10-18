@@ -4,7 +4,10 @@ import moment from "moment";
 const i18nNamespaces = ['home'];
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
-const search = async (locale, query)=>{
+import Pagination from "@/components/Pagination";
+const search = async (query, page, size, locale)=>{
+
+  const from = (page-1) * size
 
   const response = await client.search({
     index: 'articles',
@@ -14,7 +17,7 @@ const search = async (locale, query)=>{
           { match: { "locale": locale } },
           { multi_match: {
               query,
-                fields: ["title^5", "lead", "body"],
+              fields: ["title^5", "lead", "body"],
               type: "phrase"
             }
           }
@@ -22,21 +25,31 @@ const search = async (locale, query)=>{
       },
 
     },
-    size: 20
-  });
+    size,
+    from,
+    sort: [
+      { 'published': { "order": "desc", format: "strict_date_optional_time_nanos" } },
+    ]
+  })
 
   return {
     results: response.hits.hits,
-    total: response.hits.total,
+    total: response.hits.total.value,
   }
 
 }
 
 const SearchPage = async ({searchParams, params: {locale}})=>{
   moment.locale(locale)
-  const {query} = searchParams
+  let {query, page, size} = searchParams
 
-  const {results, total} = await search(locale, query)
+  if (!page || !size) {
+    page = 1;
+    size = 10;
+  }
+
+  const {results, total} = await search(query, page, size, locale)
+  console.log(total)
 
   const {resources} = await initTranslations(locale,i18nNamespaces)
 
@@ -78,6 +91,15 @@ const SearchPage = async ({searchParams, params: {locale}})=>{
         </article>
       }</div>)
     }
+    <div className="my-5"></div>
+      {
+        total >= size &&  <Pagination
+              total={total}
+              size={size}
+              page={page}
+          />
+      }
+
   </div>
   </TranslationsProvider>
 }

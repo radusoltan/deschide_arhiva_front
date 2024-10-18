@@ -1,7 +1,6 @@
 
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
-import {client} from "@/lib/elastic";
 import Link from "next/link";
 import Pagination from "@/components/Pagination";
 const i18nNamespaces = ['home'];
@@ -9,28 +8,9 @@ const i18nNamespaces = ['home'];
 
 const getArticles = async (locale, page, size)=>{
 
-  const from = (Number(page)) * Number(size)
+  const response = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}api/articles?locale=${locale}&page=${page}&size=${size}`)
 
-  const response = await client.search({
-    index: 'articles',
-    query: {
-      bool: {
-        must: [
-          { match: { "locale": locale} }
-        ]
-      }
-    },
-    size,
-    from,
-    sort: [
-      { "published": {"order": "desc", "format": "strict_date_optional_time_nanos"} }
-    ]
-  })
-
-  return {
-    articles: response.hits.hits,
-    total: response.hits.total,
-  }
+  return await response.json()
 }
 
 const Home = async ({params: {locale}, searchParams})=>{
@@ -44,8 +24,6 @@ const Home = async ({params: {locale}, searchParams})=>{
   }
 
   const {articles, total} = await getArticles(locale, page, size);
-
-
 
   const {t, resources} = await initTranslations(locale,i18nNamespaces)
 
@@ -70,10 +48,10 @@ const Home = async ({params: {locale}, searchParams})=>{
                 </div>
               </div>))}
               <Pagination
-                  total={total}
-                  page={page}
-                  size={size}
-                  articles={articles}
+                total={total}
+                page={page}
+                size={size}
+                articles={articles}
               />
             </div>
           </div>
