@@ -3,7 +3,15 @@ import {client} from "@/lib/elastic";
 
 export async function GET(request, { params: {locale} }) {
 
-
+  const countResponse = await client.count({
+    query: {
+      bool: {
+        must: [
+          { match: { locale: locale } },
+        ]
+      }
+    }
+  })
 
   const url = new URL(request.url)
   const page = Number(url.searchParams.get("page"));
@@ -29,6 +37,6 @@ export async function GET(request, { params: {locale} }) {
 
   return NextResponse.json({
     articles: response.hits.hits,
-    total: response.hits.total.value,
+    total: countResponse.count,
   })
 }
