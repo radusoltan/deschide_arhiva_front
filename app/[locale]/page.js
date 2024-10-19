@@ -3,27 +3,54 @@ import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import Link from "next/link";
 import Pagination from "@/components/Pagination";
+import {client} from "@/lib/elastic";
+
 const i18nNamespaces = ['home'];
 
-
 const getArticles = async (locale, page, size)=>{
+  const from = (page-1) * size
+  const countResponse = await client.count({
+    query: {
+      bool: {
+        must: [
+          { match: { locale: locale } },
+        ]
+      }
+    }
+  })
 
-  const response = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}api/articles?locale=${locale}&page=${page}&size=${size}`)
+  const response = await client.search({
+    index: 'articles',
+    query: {
+      bool: {
+        must: [
+          { match: { "locale": locale } },
+        ]
+      }
+    },
+    from,
+    size,
+    sort: [
+      { 'published': { "order": "desc", format: "strict_date_optional_time_nanos" } },
+    ]
+  })
 
-  return await response.json()
+  return {
+    articles: response.hits.hits,
+    total: countResponse.count,
+  }
 }
 
 const Home = async ({params: {locale}, searchParams})=>{
 
   let {page, size} = searchParams;
 
-
   if (!page || !size) {
     page = 1;
     size = 10;
   }
 
-  const {articles, total} = await getArticles(locale, page, size);
+  const {total, articles} = await getArticles(locale, page, size);
 
   const {t, resources} = await initTranslations(locale,i18nNamespaces)
 
@@ -37,7 +64,6 @@ const Home = async ({params: {locale}, searchParams})=>{
         <div className="xl:container mx-auto px-3 sm:px-4 xl:px-2">
           <div className="flex flex-row flex-wrap">
             <div className="flex flex-row flex-wrap -mx-3">
-
               {articles.map((article)=>(<div key={article._id} className="flex w-full px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-300">
                 <div className="flex flex-row sm:block">
                   <div className="py-0 sm:py-3 pl-3 sm:pl-0">
@@ -51,7 +77,6 @@ const Home = async ({params: {locale}, searchParams})=>{
                 total={total}
                 page={page}
                 size={size}
-                articles={articles}
               />
             </div>
           </div>
