@@ -4,19 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f6f2500-830b-49c9-a8ee-2513038944b3" name="Changes" comment="updated favicon;&#10;added sitemap.js;">
-      <change afterPath="$PROJECT_DIR$/app/android-chrome-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/android-chrome-512x512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/icon.jsx" afterDir="false" />
+    <list default="true" id="7f6f2500-830b-49c9-a8ee-2513038944b3" name="Changes" comment="some changes:&#10;- added admin group pages (with login and logout logic);&#10;- improvement;">
+      <change afterPath="$PROJECT_DIR$/app/[locale]/(admin)/content/articles/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/[locale]/(admin)/content/categories/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/[locale]/(admin)/content/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/[locale]/(admin)/dashboard/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/[locale]/(admin)/layout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/[locale]/(admin)/management/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/[locale]/(admin)/settings/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/[locale]/(app)/[category]/[article]/[slug]/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/[locale]/(app)/layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/[locale]/(app)/layout_def.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/[locale]/(app)/search/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/[locale]/(auth)/layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/[locale]/(auth)/login/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Admin/AdminNavigation.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Admin/Content/Categories/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/App/Footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Auth/AuthCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Auth/AuthSessionStatus.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Auth/LoginForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/LoginLinks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/content/categories.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/[locale]/[category]/[article]/[slug]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/[locale]/[category]/[article]/[slug]/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/[locale]/[category]/page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/app/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/i18n.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[locale]/[category]/[article]/[slug]/page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[locale]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/[locale]/(app)/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[locale]/search/page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en/home.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en/home.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ro/home.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ro/home.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ru/home.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ru/home.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +51,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -43,27 +62,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Node.js.LanguageChanger.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu-22.04/var/www/deschide_multilang/app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "wsl://Ubuntu-22.04@/usr/bin/node",
-    "nodejs_package_manager_path": "\\\\wsl.localhost\\Ubuntu-22.04\\usr\\bin\\yarn",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 243.19420.26\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.LanguageChanger.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu-22.04/var/www/deschide_multilang/app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;wsl://Ubuntu-22.04@/usr/bin/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;\\\\wsl.localhost\\Ubuntu-22.04\\usr\\bin\\yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.customizations&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 243.19420.26\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\app" />
@@ -72,17 +91,17 @@
       <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\app\[locale]\(admin)" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\app\[locale]" />
+      <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\app\[locale]\(app)" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\app" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\app\[locale]\[category]\[article]\[slug]" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\components\Auth" />
-      <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang" />
-      <recent name="\\wsl.localhost\Ubuntu-22.04\var\www\deschide_multilang\app\[locale]" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-b86d7ee83eed-JavaScript-WS-243.19420.26" />
+        <option value="bundled-js-predefined-d6986cc7102b-bed05e336f61-JavaScript-WS-243.20847.31" />
       </set>
     </attachedChunks>
   </component>
@@ -104,6 +123,13 @@
       <workItem from="1728983475022" duration="1722000" />
       <workItem from="1728985226122" duration="3993000" />
       <workItem from="1729066959614" duration="38924000" />
+      <workItem from="1729414700625" duration="4404000" />
+      <workItem from="1729515219540" duration="269000" />
+      <workItem from="1729515580840" duration="2761000" />
+      <workItem from="1729586172352" duration="13423000" />
+      <workItem from="1729607482062" duration="1267000" />
+      <workItem from="1729665703405" duration="4419000" />
+      <workItem from="1729675483177" duration="335000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -161,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729166286838</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added bing clarity script to main layout;">
+      <option name="closed" value="true" />
+      <created>1729675510780</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1729675510780</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +219,8 @@
     <MESSAGE value="initial commit 4" />
     <MESSAGE value="initial commit 5" />
     <MESSAGE value="updated favicon;&#10;added sitemap.js;" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated favicon;&#10;added sitemap.js;" />
+    <MESSAGE value="added bing clarity script to main layout;" />
+    <MESSAGE value="some changes:&#10;- added admin group pages (with login and logout logic);&#10;- improvement;" />
+    <option name="LAST_COMMIT_MESSAGE" value="some changes:&#10;- added admin group pages (with login and logout logic);&#10;- improvement;" />
   </component>
 </project>
